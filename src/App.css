@@ -12,8 +12,9 @@ background-color: #f0f0f0;
 color: black;
 padding: 1px 0;
 margin-bottom: 0px;
-font-size: 10px;
+font-size: 40px;
 font-family:"Lucida Console";
+flex-grow: 1;
 }
 
 
