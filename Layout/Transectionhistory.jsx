@@ -66,7 +66,26 @@ const Transectionhistory = ({ transactions, setTransactions, setBalance, setInco
   return (
 
     <div className="history-transactions">
-      <h1 className="transaction-header">History</h1>
+      <h1 className="transaction-header">History</h1>   <div className="filter-container">
+        <button onClick={() => setShowDateRange(!showDateRange)} className='filter-button'>Filter</button>
+        {showDateRange && (
+          <div className="date-range-dropdown">
+            <input
+              type="date"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+              placeholder="Start Date"
+            />
+            <input
+              type="date"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+              placeholder="End Date"
+            />
+            <button onClick={handleFilterByRange}>Apply</button>
+          </div>
+        )}
+      </div>
       <div className="transactions-table-container">
         <ul className="transactions-table">
           <li className="table-header">
@@ -98,26 +117,7 @@ const Transectionhistory = ({ transactions, setTransactions, setBalance, setInco
           ))}
         </ul>
       </div>
-      <div className="filter-container">
-        <button onClick={() => setShowDateRange(!showDateRange)} className='filter-button'>Filter</button>
-        {showDateRange && (
-          <div className="date-range-dropdown">
-            <input
-              type="date"
-              value={startDate}
-              onChange={(e) => setStartDate(e.target.value)}
-              placeholder="Start Date"
-            />
-            <input
-              type="date"
-              value={endDate}
-              onChange={(e) => setEndDate(e.target.value)}
-              placeholder="End Date"
-            />
-            <button onClick={handleFilterByRange}>Apply</button>
-          </div>
-        )}
-      </div>
+   
     </div>
   )
 

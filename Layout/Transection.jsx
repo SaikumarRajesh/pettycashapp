@@ -86,9 +86,11 @@ const TransactionItem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (income === expenses && formData.optionId === 'EXPENSES' && expenses>income) {
+    if (income === expenses && formData.optionId === 'EXPENSES') {
       alert('Insufficient Balance.');
-    } else { 
+    }else if ( parseFloat(formData.amount) > balance && formData.optionId === 'EXPENSES') {
+      alert('Insufficient Balance');
+    }else { 
 
     try {
       const payload = { ...formData, user_Id, Name };
