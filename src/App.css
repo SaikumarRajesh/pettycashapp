@@ -7,17 +7,20 @@ body {
 
 
 .header {
-text-align: center;
-background-color: #f0f0f0;
-color: black;
-padding: 1px 0;
-margin-bottom: 0px;
-font-size: 40px;
-font-family:"Lucida Console";
-flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
 }
 
-
+.header__title {
+  text-align: center;
+  flex-grow: 1;
+  font-size: 40px;
+  font-family:"Lucida Console";
+  color: black;
+}
 
 .box {
   width: 320px;

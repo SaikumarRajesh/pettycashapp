@@ -51,7 +51,9 @@ function Password() {
   
   return (
     <div>
-      <div className='header'> <h1><b>Mycash</b></h1></div>
+      <div className='header'> 
+      <div className="header__title">Mycash</div>
+      </div>
     <div className="box">
       <h1>Set password <i className="fa fa-unlock-alt" aria-hidden="true"></i></h1>
       <form onSubmit={handleSubmit}>

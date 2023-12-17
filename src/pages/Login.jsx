@@ -60,7 +60,9 @@ function Login() {
   return (
 
     <div>
-      <div className='header'><h1>Mycash</h1></div>
+      <div className='header'> 
+      <div className="header__title">Mycash</div>
+      </div>
       <div className="box">
         <h1>user <i className="fa fa-user-circle" aria-hidden="true"></i></h1>
         <form onSubmit={handleSubmit}>
