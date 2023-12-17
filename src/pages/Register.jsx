@@ -59,7 +59,7 @@ function Register() {
      
     return (
       <div>
-      <div className='header'> <h1><b>Registration</b></h1></div>
+      <div className='header'> <h1><b>Mycash</b></h1></div>
       <div className='box'>
       <h1>Register here! <i className="fa fa-user-plus" aria-hidden="true"></i></h1>
       <form onSubmit={handleSubmit}>
