@@ -86,9 +86,9 @@ const TransactionItem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (income === expenses && formData.optionId === 'EXPENSES') {
-      alert('Cannot add expenses when income and expenses are equal.');
-    } else {
+    if (income === expenses && formData.optionId === 'EXPENSES' && expenses>income) {
+      alert('Insufficient Balance.');
+    } else { 
 
     try {
       const payload = { ...formData, user_Id, Name };
