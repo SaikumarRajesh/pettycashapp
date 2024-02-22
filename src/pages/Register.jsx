@@ -10,6 +10,7 @@ function Register() {
     email: '',
     password: ''
   };
+ 
 
     const [formData, setFormData] = useState(initialFormData);
   
